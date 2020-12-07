@@ -97,15 +97,15 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://15.206.211.83:1995/sudheer/repository/sudheer-releasesrepo/</url>
+	      <id>admin</id>
+	      <name>sudheerreleasesrepo </name>
+	      <url>http://15.206.211.83:1995/sudheer/repository/sudheerreleasesrepo/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://15.206.211.83:1995/sudheer/repository/sudheer-snapshotrepo/</url>
+	      <id>admin</id>
+	      <name>sudheersnapshotrepo </name>
+	      <url>http://15.206.211.83:1995/sudheer/repository/sudheersnapshotrepo/ </url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
