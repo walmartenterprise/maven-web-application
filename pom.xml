@@ -97,13 +97,13 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>admin</id>
+	      <id>nexus</id>
 	      <name>sudheerreleasesrepo </name>
 	      <url>http://15.206.211.83:1995/sudheer/repository/sudheerreleasesrepo/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>admin</id>
+	      <id>nexus</id>
 	      <name>sudheersnapshotrepo </name>
 	      <url>http://15.206.211.83:1995/sudheer/repository/sudheersnapshotrepo/ </url>
 	    </snapshotRepository>
