@@ -1,0 +1,31 @@
+node 
+{
+def mavenHome = tool name: "maven 3.6.3"
+stage('checkoutcode')
+{
+git branch: 'development', credentialsId: 'e1422877-01cb-4b79-9bc9-1acf8a03cb80', url: 'https://github.com/walmartenterprise/maven-web-application.git'                                                         
+
+}
+stage('build')
+ {
+ sh "${mavenHome}/bin/mvn clean package"
+ }
+ 
+ stage('executesonarqubereport')
+ {
+ sh "${mavenHome}/bin/mvn sonar:sonar"
+ }
+ stage('uploadartifactsintonexus')
+ {
+ sh "${mavenHome}/bin/mvn deploy"
+ }
+ 
+ stage('deployintotomcat')
+ {
+ sshagent(['743599dc-735c-4e99-b9e9-003e56bfac4c']) 
+   { 
+   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.156.122:/opt/apache-tomcat-9.0.40/webapps/"
+   }
+
+ }
+}
